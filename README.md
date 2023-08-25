@@ -3,7 +3,7 @@
 
 Hauptmerkmale:
 # 🎨 Design: 
-Modernes und ansprechendes Design, umgesetzt mit [Wählen Sie entweder Bootstrap oder TailwindCSS, je nachdem, was Sie verwendet haben].
+Modernes und ansprechendes Design, umgesetzt mit css.
 # 📸 Interaktive Galerie: 
 Lightbox-Effekt für Bildpräsentationen und dynamische Slideshow zur Schau meiner Projekte und Arbeiten.
 # 🛠️ Technologien: 
