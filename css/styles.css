@@ -67,6 +67,11 @@ body, html {
 #contacts {
     background-color: var(--bazaar);
     color: var(--swiss-coffee);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 #gallery {
@@ -159,8 +164,12 @@ body, html {
 }
 
 .project-image {
-    width: 100%;
+    
+    width: 450px; 
+    height: 250px; 
+    object-fit: cover;
     transition: opacity 0.3s;
+    border-radius: 10px;
 }
 
 .project-title {
@@ -224,6 +233,14 @@ body, html {
     position: relative;
     overflow: hidden;
 }
+.contact-form {
+    background-color: rgba(255, 255, 255, 0.7); /* weiß mit 70% Opazität */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* leichter Schatten */
+    width: 80%; /* Breite kann nach Bedarf angepasst werden */
+    max-width: 500px; /* Max. Breite, um auf großen Bildschirmen nicht zu breit zu werden */
+}
 
 
 
@@ -251,54 +268,43 @@ body, html {
 
 .input-group {
     position: relative;
-    margin-bottom: 1.5rem;
+    margin-bottom: 20px;
 }
 
-.input-group input,
-.input-group textarea {
+input, textarea {
     width: 100%;
-    padding: 10px 10px 10px 0;
-    border: none;
-    background: transparent;
-    border-bottom: 2px solid var(--ebony, #0e1324);
-    transition: border 0.3s;
-    position: relative;
-    z-index: 2;
-}
-
-.input-group label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px 0;
-    z-index: 1;
-    transition: transform 0.3s, color 0.3s;
-}
-
-.input-group input:focus,
-.input-group textarea:focus {
-    outline: none;
-    border-color: var(--cardinal, #d12121);
-}
-
-.input-group input:focus + label,
-.input-group textarea:focus + label {
-    transform: translateY(-25px);
-    color: var(--cardinal, #d12121);
-    font-size: 0.8rem;
-}
-
-.contact-form button {
-    padding: 15px 25px;
-    border: none;
-    background-color: var(--ebony, #0e1324);
-    color: var(--swiss-coffee, #d4cccc);
-    cursor: pointer;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--ebony);
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
 }
 
-.contact-form button:hover {
-    background-color: var(--cardinal, #d12121);
-    transform: translateY(-3px);
+label {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+input:focus + label, input:valid + label, textarea:focus + label, textarea:valid + label {
+    top: -20px;
+    left: 10px;
+    font-size: 12px;
+    background-color: var(--bazaar); /* oder jede andere Farbe, die dir gefällt */
+    padding: 2px 5px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: var(--cardinal);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--quicksand);
 }
